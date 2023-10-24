@@ -1,0 +1,140 @@
+Name :- 087_Shubham_More
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+//Q1. Accept two number from user and do the sum of it.
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace task01_02
+{
+    struct Addition
+    {
+           public int add(int a, int b)
+        { 
+            return a + b; 
+        }
+    }
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Addition addition = new Addition();
+            Console.WriteLine("Enter Two Numbers :");
+            int a = Convert.ToInt32(Console.ReadLine());
+            int b = Convert.ToInt32(Console.ReadLine());
+            int result = addition.add(a, b);
+            Console.WriteLine("Result = {0} ",result);
+        }
+    }
+}
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+/*Q2. Accept a float value and print square of that number
+Solve above code using Parse(), ToSingle() and TryPrase() method.
+Also observe exception if you do not enter valid data*/
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace task02_02
+{
+    internal class Program
+    {
+        public static void square(float x)
+        {
+            if (x != 0) 
+            {
+                Console.WriteLine(x * x);
+            }
+
+            else 
+            {
+                Console.WriteLine("invalid number");
+            }
+        }
+
+        static void Main(string[] args)
+        {
+            string s;
+
+            Console.WriteLine("Enter the Number");
+            s = Console.ReadLine();
+
+            //float p = float.Parse(s);
+            //float q = Convert.ToSingle(s);
+            bool r = float.TryParse(s, out float f);
+
+            square(f); 
+            
+
+        }
+    }
+}
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+/*
+Create a class calculator and write 3 instance method square, cube, 
+round[if in put 22.5 o/p 22]
+Which will return square .cube and rounded number.
+Create object and call method and print the result.
+ */
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace task03_02
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Calculator c1 = new Calculator();
+            c1.square(2.2f);
+            c1.cube(5.5f);
+            c1.rounded(10.5f);
+        }
+    }
+}
+
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace task03_02
+{
+    internal class Calculator
+    {
+        public void square(float x)
+        {
+            Console.WriteLine(x*x);
+        }
+
+        public void cube(float x)
+        {
+            Console.WriteLine(x * x * x);
+        }
+
+        public void rounded(float x)
+        {
+            int y = (int)x;
+            Console.WriteLine(y);
+        }
+
+
+    }
+}
+
