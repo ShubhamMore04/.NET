@@ -1,0 +1,311 @@
+/*
+ 1) define a functional interface "First" with an abstract method "void disp1()" , 
+ default method "void disp2()" and a static method "void disp3()"
+
+inside main function using lambda expression invoke "disp1()" and "disp2()" methods.
+also invoke "disp3()" method inside main.
+ */
+
+
+
+package day14;
+
+interface First{
+	void disp1();
+	default void disp2()
+	{
+		System.out.println("Inside def disp2");
+	}
+	
+	static void disp3()
+	{
+		System.out.println("Inside static disp3");
+	}
+	
+}
+public class ass1 {
+
+	public static void main(String[] args) {
+	
+		First ref=()->{System.out.println("Inside disp1");};
+		ref.disp1();
+		ref.disp2();
+		First.disp3();
+
+	}
+
+}
+
+/*
+ 2) define a functional interface "Second" with an abstract method "void disp4()".
+
+define a class Demo with main function.
+inside main function create two implementations of "Second" using lambda expression and display their names.
+ */
+
+
+package day14;
+
+interface Second{
+	void disp4();
+}
+public class ass2 {
+
+	public static void main(String[] args) {
+		
+		Second ref=()->{System.out.println("Inside first implementation of second interface");};
+		Second ref2=()->{System.out.println("Inside second implmentation of second interface");};
+		ref.disp4();
+		ref2.disp4();
+		System.out.println(ref.getClass().getName());
+		System.out.println(ref2.getClass().getName());
+	}
+
+}
+
+
+package day14;
+
+/*
+ 3) define a functional interface "MyInterface" with an abstract method "void fun()"
+
+define a class Demo with two functions "static void perform" and main.
+
+from main function pass lambda expression, collect it in "perform" method and invoke "fun()" function.
+ */
+
+interface MyInterface{
+	void fun();
+}
+public class ass3 {
+	static void perform(MyInterface ref)
+	{
+		ref.fun();
+	}
+
+	public static void main(String[] args) {
+		//MyInterface ref=()->{System.out.println("Inside of first implementation of MyInterface");};
+		perform(()->{System.out.println("Inside of first implementation of MyInterface");});
+	}
+
+}
+
+package day14;
+/*
+ 4) define a functional interface "Calculator" with an abstract method "int multiply(int a,int b)"
+define a class "CalcDemo" with main method.
+inside main using lambda create an implementation of "Calculator" , invoke "multiply()" method and
+ display its result.
+
+ */
+
+interface Calculator{
+	int multiply(int a,int b);
+}
+public class ass4 {
+
+	public static void main(String[] args) {
+		
+  Calculator ref=(int a,int b)->{return a*b;};
+  System.out.println("Multiplication of two no is "+ref.multiply(3,4));
+	}
+
+}
+
+/*
+ 5) define a class "Display" with "void disp" method. inside this method display values from 1 to 10.
+
+create an implementation of "Runnable" using lambda expression which will invoke "disp()"
+ method of "Display" class.
+
+create 2 threads and pass above created "Runnable" implementation to these threads.
+make sure while one thread is executing other thread will not interfere.
+
+ */
+
+
+
+package day14;
+
+//5) define a class "Display" with "void disp" method. inside this method display values from 1 to 10.
+//
+//create an implementation of "Runnable" using lambda expression which will invoke "disp()" 
+//method of "Display" class.
+//
+//create 2 threads and pass above created "Runnable" implementation to these threads.
+//make sure while one thread is executing other thread will not interfere.
+public class Display {
+	
+		 synchronized void disp() {
+			
+			for(int i=1;i<=10;i++) {
+				System.out.println(i);
+			}
+			
+		
+	}
+	
+	public static void main(String[] args) {
+		Display d=new Display();
+		Runnable ref=()->{d.disp();};
+		
+		Thread t1=new Thread(ref);
+		Thread t2=new Thread(ref);
+		
+		t1.start();
+		t2.start();
+		
+	
+		
+
+	}
+
+}
+--------------------------------------------------------------------------------------------------------------------------------------------------
+/*
+ * 1) define a functional interface "First" with an abstract method "void disp1()".
+define a class "Second" with a method "void fun1()"
+
+inside main function create a method reference for "First" and invoke "fun1" of "Second"
+ */
+
+
+
+package day14;
+
+interface First2{
+	 void disp1();
+}
+
+class Second2
+{
+	void fun1()
+	{
+		System.out.println("Inside func1 of second");
+	}
+	
+}
+
+public class refass1 {
+
+	public static void main(String[] args) {
+		Second2 s2=new Second2();
+		
+		First2 ref=s2::fun1;
+		
+		ref.disp1();
+	
+
+	}
+
+}
+
+/*
+ 2) define a functional interface "Third" with an abstract method "void show(int num)".
+define a class "Sample" with a method "void disp(int num)"
+
+inside main function create a method reference for "Third" and invoke "disp" of "Sample" by passing a value "500".
+ */
+
+
+package day14;
+
+interface Third{
+	void show(int num);
+}
+
+class Sample{
+	void disp(int num){
+		System.out.println("Inside sample class "+num);
+	}
+}
+
+public class refass2 {
+
+	public static void main(String[] args) {
+		Sample s1=new Sample();
+		
+		Third ref=s1::disp;
+		ref.show(500);
+	}
+
+}
+
+/*
+ 
+3) define a functional interface "Fifth" with an abstract method "int add(int a,int b)"
+define a class Math1 with a method "int calc(int a,int b)" 
+
+inside main function invoke "calc" method with the help of
+	a) lamdba expression
+	b) method reference
+ */
+
+
+
+package day14;
+
+interface Fifth{
+	int add(int a,int b);
+}
+
+class Math1{
+	int calc(int a,int b)
+	{
+		return a+b;
+	}
+}
+public class refass3 {
+
+	public static void main(String[] args) {
+		
+		Math1 m1=new Math1();
+		Fifth ref=m1::calc;
+		System.out.println("Using method referance "+ref.add(4, 5));
+		
+		Math1 m2=new Math1();
+		Fifth ref1=(int a,int b)->{return(m2.calc(a,b));};
+		System.out.println("Using lambda "+ref1.add(15, 20));
+		
+		
+
+	}
+
+}
+
+package day14;
+/*
+ 4) define a functional interface "Sixth" with an abstract method "void disp5()".
+define a class "Sample" with a static method "void fun1()"
+
+inside main function create a method reference for "Sixth" and invoke "fun1" of "Sample"
+ */
+
+interface Sixth{
+	void disp5();
+	
+}
+
+class Sample1{
+	static void fun1()
+	{
+		System.out.println("Inside fun1");
+		
+	}
+}
+public class refass4 {
+
+	public static void main(String[] args) {
+		
+		
+		
+		Sixth ref=Sample1::fun1;
+		ref.disp5();
+		
+		Sixth ref1=()->{Sample1.fun1();};
+		ref1.disp5();    //using lambda
+		
+
+	}
+
+}
