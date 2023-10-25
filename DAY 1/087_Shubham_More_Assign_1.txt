@@ -1,0 +1,145 @@
+Name: 087_Shubham_More
+
+----------------------------------------------------------------------------------------------------------------------------------------
+Q.1-->Create class calculator with two method Add and product. Create object and call method.
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp1
+{
+   class Class
+    {
+        public int add (int x, int y)
+        { 
+            return x + y; 
+        }
+        public int product (int x, int y)
+        { 
+            return x * y; 
+        }
+    }
+    internal class task1
+    {
+        static void Main(string[] args)
+        {
+            Class class1 = new Class();
+            Console.WriteLine("Enter two Numbers");
+            int a = Convert.ToInt32(Console.ReadLine());
+            int b = Convert.ToInt32(Console.ReadLine());
+            int ans = class1.add(a, b);
+            Console.WriteLine("result :" +ans);
+            Console.WriteLine("Enter two Numbers");
+            int m = Convert.ToInt32(Console.ReadLine());
+            int n = Convert.ToInt32(Console.ReadLine());
+            int ans1 = class1.product(m, n);
+            Console.WriteLine("result :"+ans1);
+
+        }
+    }
+}
+-------------------------------------------------------------------------------------------------------------------------------------------
+
+Q.2-->Create class library with method fact() which will return factorial of a number. Use it in console application
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace task2
+{
+    public class Factorial
+    {
+        public static long fact(int n)
+        {
+            if (n == 0 || n == 1)
+                return n;
+
+            else
+                return n * fact(n - 1);
+        }
+
+    }
+}
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using task2;
+
+namespace task2_1
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine(Factorial.fact(5));
+        }
+    }
+}
+----------------------------------------------------------------------------------------------------------------------------------------------
+
+Q.3-->Create a class student in namespace DAC and in namespace DBDA write method add in both class. In entry point call both method
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace DAC
+{
+    internal class Student
+    {
+        public int add (int a, int b)
+        { 
+            return a + b; 
+        }
+    }
+}
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace DBDA
+{
+    internal class student
+    {
+        public int add(int x, int y)
+        { 
+            return x + y; 
+        }
+    }
+}
+
+using DAC;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace task3
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Student ref1 = new Student();
+            Student ref2 = new Student();
+            Console.WriteLine(ref1.add(5, 2));
+            Console.WriteLine(ref2.add(10, 2));
+        }
+    }
+}
+-------------------------------------------------------------------------------------------------------------------------------------------
