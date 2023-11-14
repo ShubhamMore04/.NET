@@ -1,0 +1,14 @@
+C:\CDAC\.net\All Assignments\CA_BA_BOB\obj\Debug\net7.0\CA_BA_BOB.GeneratedMSBuildEditorConfig.editorconfig
+C:\CDAC\.net\All Assignments\CA_BA_BOB\obj\Debug\net7.0\CA_BA_BOB.AssemblyInfoInputs.cache
+C:\CDAC\.net\All Assignments\CA_BA_BOB\obj\Debug\net7.0\CA_BA_BOB.AssemblyInfo.cs
+C:\CDAC\.net\All Assignments\CA_BA_BOB\obj\Debug\net7.0\CA_BA_BOB.csproj.CoreCompileInputs.cache
+C:\CDAC\.net\All Assignments\CA_BA_BOB\bin\Debug\net7.0\CA_BA_BOB.exe
+C:\CDAC\.net\All Assignments\CA_BA_BOB\bin\Debug\net7.0\CA_BA_BOB.deps.json
+C:\CDAC\.net\All Assignments\CA_BA_BOB\bin\Debug\net7.0\CA_BA_BOB.runtimeconfig.json
+C:\CDAC\.net\All Assignments\CA_BA_BOB\bin\Debug\net7.0\CA_BA_BOB.dll
+C:\CDAC\.net\All Assignments\CA_BA_BOB\bin\Debug\net7.0\CA_BA_BOB.pdb
+C:\CDAC\.net\All Assignments\CA_BA_BOB\obj\Debug\net7.0\CA_BA_BOB.dll
+C:\CDAC\.net\All Assignments\CA_BA_BOB\obj\Debug\net7.0\refint\CA_BA_BOB.dll
+C:\CDAC\.net\All Assignments\CA_BA_BOB\obj\Debug\net7.0\CA_BA_BOB.pdb
+C:\CDAC\.net\All Assignments\CA_BA_BOB\obj\Debug\net7.0\CA_BA_BOB.genruntimeconfig.cache
+C:\CDAC\.net\All Assignments\CA_BA_BOB\obj\Debug\net7.0\ref\CA_BA_BOB.dll
