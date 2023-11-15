@@ -1,0 +1,42 @@
+E:\Adoassign1\16exam\CA_Account\bin\Debug\net7.0\CA_Account.exe
+E:\Adoassign1\16exam\CA_Account\bin\Debug\net7.0\CA_Account.deps.json
+E:\Adoassign1\16exam\CA_Account\bin\Debug\net7.0\CA_Account.runtimeconfig.json
+E:\Adoassign1\16exam\CA_Account\bin\Debug\net7.0\CA_Account.dll
+E:\Adoassign1\16exam\CA_Account\bin\Debug\net7.0\CA_Account.pdb
+E:\Adoassign1\16exam\CA_Account\obj\Debug\net7.0\CA_Account.GeneratedMSBuildEditorConfig.editorconfig
+E:\Adoassign1\16exam\CA_Account\obj\Debug\net7.0\CA_Account.AssemblyInfoInputs.cache
+E:\Adoassign1\16exam\CA_Account\obj\Debug\net7.0\CA_Account.AssemblyInfo.cs
+E:\Adoassign1\16exam\CA_Account\obj\Debug\net7.0\CA_Account.csproj.CoreCompileInputs.cache
+E:\Adoassign1\16exam\CA_Account\obj\Debug\net7.0\CA_Account.dll
+E:\Adoassign1\16exam\CA_Account\obj\Debug\net7.0\refint\CA_Account.dll
+E:\Adoassign1\16exam\CA_Account\obj\Debug\net7.0\CA_Account.pdb
+E:\Adoassign1\16exam\CA_Account\obj\Debug\net7.0\CA_Account.genruntimeconfig.cache
+E:\Adoassign1\16exam\CA_Account\obj\Debug\net7.0\ref\CA_Account.dll
+E:\Adoassign1\16examAccountApplicationfull\CA_Account\bin\Debug\net7.0\CA_Account.exe
+E:\Adoassign1\16examAccountApplicationfull\CA_Account\bin\Debug\net7.0\CA_Account.deps.json
+E:\Adoassign1\16examAccountApplicationfull\CA_Account\bin\Debug\net7.0\CA_Account.runtimeconfig.json
+E:\Adoassign1\16examAccountApplicationfull\CA_Account\bin\Debug\net7.0\CA_Account.dll
+E:\Adoassign1\16examAccountApplicationfull\CA_Account\bin\Debug\net7.0\CA_Account.pdb
+E:\Adoassign1\16examAccountApplicationfull\CA_Account\obj\Debug\net7.0\CA_Account.GeneratedMSBuildEditorConfig.editorconfig
+E:\Adoassign1\16examAccountApplicationfull\CA_Account\obj\Debug\net7.0\CA_Account.AssemblyInfoInputs.cache
+E:\Adoassign1\16examAccountApplicationfull\CA_Account\obj\Debug\net7.0\CA_Account.AssemblyInfo.cs
+E:\Adoassign1\16examAccountApplicationfull\CA_Account\obj\Debug\net7.0\CA_Account.csproj.CoreCompileInputs.cache
+E:\Adoassign1\16examAccountApplicationfull\CA_Account\obj\Debug\net7.0\CA_Account.dll
+E:\Adoassign1\16examAccountApplicationfull\CA_Account\obj\Debug\net7.0\refint\CA_Account.dll
+E:\Adoassign1\16examAccountApplicationfull\CA_Account\obj\Debug\net7.0\CA_Account.pdb
+E:\Adoassign1\16examAccountApplicationfull\CA_Account\obj\Debug\net7.0\CA_Account.genruntimeconfig.cache
+E:\Adoassign1\16examAccountApplicationfull\CA_Account\obj\Debug\net7.0\ref\CA_Account.dll
+C:\CDAC\.net\ACCOUNT ASSIGN\CA_Account\CA_Account\bin\Debug\net7.0\CA_Account.exe
+C:\CDAC\.net\ACCOUNT ASSIGN\CA_Account\CA_Account\bin\Debug\net7.0\CA_Account.deps.json
+C:\CDAC\.net\ACCOUNT ASSIGN\CA_Account\CA_Account\bin\Debug\net7.0\CA_Account.runtimeconfig.json
+C:\CDAC\.net\ACCOUNT ASSIGN\CA_Account\CA_Account\bin\Debug\net7.0\CA_Account.dll
+C:\CDAC\.net\ACCOUNT ASSIGN\CA_Account\CA_Account\bin\Debug\net7.0\CA_Account.pdb
+C:\CDAC\.net\ACCOUNT ASSIGN\CA_Account\CA_Account\obj\Debug\net7.0\CA_Account.GeneratedMSBuildEditorConfig.editorconfig
+C:\CDAC\.net\ACCOUNT ASSIGN\CA_Account\CA_Account\obj\Debug\net7.0\CA_Account.AssemblyInfoInputs.cache
+C:\CDAC\.net\ACCOUNT ASSIGN\CA_Account\CA_Account\obj\Debug\net7.0\CA_Account.AssemblyInfo.cs
+C:\CDAC\.net\ACCOUNT ASSIGN\CA_Account\CA_Account\obj\Debug\net7.0\CA_Account.csproj.CoreCompileInputs.cache
+C:\CDAC\.net\ACCOUNT ASSIGN\CA_Account\CA_Account\obj\Debug\net7.0\CA_Account.dll
+C:\CDAC\.net\ACCOUNT ASSIGN\CA_Account\CA_Account\obj\Debug\net7.0\refint\CA_Account.dll
+C:\CDAC\.net\ACCOUNT ASSIGN\CA_Account\CA_Account\obj\Debug\net7.0\CA_Account.pdb
+C:\CDAC\.net\ACCOUNT ASSIGN\CA_Account\CA_Account\obj\Debug\net7.0\CA_Account.genruntimeconfig.cache
+C:\CDAC\.net\ACCOUNT ASSIGN\CA_Account\CA_Account\obj\Debug\net7.0\ref\CA_Account.dll
