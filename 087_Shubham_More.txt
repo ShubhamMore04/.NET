@@ -1,0 +1,193 @@
+Shubham_More_087
+
+Q1-
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace CA_Practical_Q1
+{
+    internal class Customer
+    {
+        public int MemberId { get; set; }
+
+        public string Name { get; set; }
+
+        public string Location { get; set; }
+
+        public string MobileNo { get; set; }
+
+        public double BillAmt { get; set; }
+    }
+}
+---------------------------------------------------------
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace CA_Practical_Q1
+{
+    internal interface ICustomerRepository
+    {
+        Customer GetCustomer(int id);
+        IEnumerable<Customer> GetAllCustomer();
+        Customer Add(Customer customer);
+        Customer Update(Customer customerchange);
+        Customer Delete(int id);
+
+        public IEnumerable<Customer> GetStartWithName(char name);
+    }
+}
+
+----------------------------------------------------------------
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace CA_Practical_Q1
+{
+    internal class MockCustomerRepository : ICustomerRepository
+    {
+
+        List<Customer> _customerList;
+        public MockCustomerRepository() 
+        {
+            _customerList = new List<Customer>()
+            {
+                new Customer() {MemberId=1, Name = "Raj", Location = "Andheri", MobileNo = "9326444913", BillAmt = 25850},
+                new Customer() {MemberId=2, Name = "Geeta", Location = "Andheri", MobileNo = "8426444913", BillAmt = 3850},
+                new Customer() {MemberId=3, Name= "Rohan", Location = "Juhu", MobileNo = "7516444913", BillAmt = 26750},
+                new Customer() {MemberId=4, Name = "Kavita", Location = "Juhu", MobileNo = "9646444913", BillAmt = 20250},
+
+            };
+        }
+        public Customer Add(Customer customer)
+        {
+            customer.MemberId = _customerList.Max(x => x.MemberId)+1;
+            _customerList.Add(customer);
+            return customer;
+        }
+
+        public Customer Delete(int id)
+        {
+            Customer customer = _customerList.FirstOrDefault(e => e.MemberId == id);
+            if (customer != null) 
+            {
+                _customerList.Remove(customer);
+            }
+            return customer;
+        }
+
+        public IEnumerable<Customer> GetAllCustomer()
+        {
+            return _customerList;
+        }
+
+        public Customer GetCustomer(int id)
+        {
+            return _customerList.FirstOrDefault(e => e.MemberId == id);
+        }
+
+        public Customer Update(Customer customerchange)
+        {
+            Customer customer = _customerList.FirstOrDefault(e => e.MemberId == customerchange.MemberId);
+
+            if (customer != null)
+            {
+                customer.MemberId=customerchange.MemberId;
+                customer.Name=customerchange.Name;
+                customer.Location=customerchange.Location;
+                customer.MobileNo=customerchange.MobileNo;
+                customer.BillAmt=customerchange.BillAmt;
+            }
+            return customer;
+        }
+
+        public IEnumerable<Customer> GetStartWithName(char name)
+        {
+            return _customerList.FindAll(e => e.Name.StartsWith(name));
+        }
+
+        public Customer GetEmployee(string location)
+        {
+            return _customerList.FirstOrDefault(e => e.Location == location);
+        }
+    }
+}
+------------------------------------------------------
+
+using System;
+
+namespace CA_Practical_Q1
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            MockCustomerRepository db = new MockCustomerRepository();
+
+            Console.WriteLine("SHOW CUSTOMER LIST--->");
+            Display(db);
+
+            Console.WriteLine("ADD CUSTOMER-->");
+            Customer a = db.Add (new Customer { Name = "Raghav", Location = "Mumbai", MobileNo = "8955489441", BillAmt = 20000 });
+            Display(db);
+
+            Console.WriteLine("GET EMPLOYEE WITH ID --->");
+            Customer b = db.GetCustomer(3);
+            Console.WriteLine("{0} {1} {2} {3} {4}", b.MemberId, b.Name, b.Location, b.MobileNo, b.BillAmt);
+            Console.WriteLine("-----------------------------------------------------------------");
+
+            Console.WriteLine("DELETE EMPLOYEE WITH ID --->");
+            db.Delete(2);
+            Display(db);
+
+            Console.WriteLine("UPDATE UPDATE --->");
+            Customer c = new Customer { MemberId = 3, Name = "Ram", Location = "Mumbai", MobileNo = "8955489441", BillAmt = 10000 };
+            UpdateData(c, db);
+
+            Console.WriteLine("GET EMPLOYEE WHOSE NAME STARTING WITH S --->");
+            Display1(db);
+            Console.WriteLine("-----------------------------------------------------------------");
+
+            Console.WriteLine("GET EMPLOYEE WITH LOCATION --->");
+            Customer f = db.GetEmployee("Andheri");
+            Console.WriteLine("{0} {1} {2} {3} {4}", f.MemberId, f.Name, f.Location, f.MobileNo, f.BillAmt);
+            Console.WriteLine("-----------------------------------------------------------------");
+
+        }
+
+        private static void Display1(MockCustomerRepository db)
+        {
+            foreach (Customer c in db.GetStartWithName('K'))
+                Console.WriteLine("{0} {1} {2} {3} {4}", c.MemberId, c.Name, c.Location, c.MobileNo, c.BillAmt);
+        }
+
+        private static void UpdateData(Customer c, MockCustomerRepository db)
+        {
+            db.Update(c);
+            Display(db);
+        }
+
+        static void Display(MockCustomerRepository db)
+        {
+            foreach(Customer c in db.GetAllCustomer()) 
+            
+                Console.WriteLine("{0} {1} {2} {3} {4}", c.MemberId, c.Name, c.Location, c.MobileNo, c.BillAmt);
+
+                Console.WriteLine("-----------------------------------------------------------------");
+            
+        }
+    }
+}
+
+---------------------------------------------------------------------------------------
